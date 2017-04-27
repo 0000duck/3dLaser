@@ -1,25 +1,32 @@
 ﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "parawindow.h"
+#include "markwindow.h"
+#include "mcurvwindow.h"
 #include "view.h"
 #include "file.h"
-#include <vtkRenderWindow.h>
 #include "QMessageBox"
 #include <string>
 using namespace std;
+
+ParaWindow *paraw;
+MarkWindow *markw;
+McurvWindow *mcurvw;
+View *v;
+File *f;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    View *v = new View();
-    File *f = new File();
-    v->initViewer();
-    ui->qvtkWidget->SetRenderWindow(v->viewer->getRenderWindow());
-    string fpath = "E:\\part-time\\DIY\\3dsubcarving\\SoftWareProject\\3dTest\\mycube.pcd";
-    //f->f_open(fpath);
-    //v->showModel(f->cloud);
-    ui->qvtkWidget->update();
+
+    paraw  = new ParaWindow();
+    markw  = new MarkWindow();
+    mcurvw = new McurvWindow();
+
+    v = new View();
+    f = new File();
 }
 
 MainWindow::~MainWindow()
@@ -49,7 +56,7 @@ void MainWindow::slot_FileExit()
 
 void MainWindow::slot_LaserPara()
 {
-
+    paraw->show();
 }
 
 void MainWindow::slot_LaserRegImp()
@@ -64,12 +71,12 @@ void MainWindow::slot_LaserRegExp()
 
 void MainWindow::slot_LaserBatchSet()
 {
-
+    mcurvw->show();
 }
 
 void MainWindow::slot_LaserTagGen()
 {
-
+    markw->show();
 }
 
 void MainWindow::slot_LaserCal()

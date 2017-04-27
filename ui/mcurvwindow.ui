@@ -55,7 +55,10 @@
     </layout>
    </item>
    <item>
-    <layout class="QGridLayout" name="ly_mcurv2">
+    <layout class="QGridLayout" name="ly_mcurv2" columnstretch="0,0,0,0,0,0,0">
+     <property name="horizontalSpacing">
+      <number>6</number>
+     </property>
      <item row="0" column="0">
       <widget class="QLabel" name="lb_mcurv_num">
        <property name="text">
@@ -70,38 +73,24 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="2">
-      <widget class="QLineEdit" name="le_num_X"/>
-     </item>
-     <item row="0" column="4">
-      <widget class="QLabel" name="lb_num_Y">
-       <property name="text">
-        <string>Y:</string>
+     <item row="1" column="5">
+      <widget class="QLineEdit" name="le_space_Y">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
        </property>
       </widget>
      </item>
-     <item row="0" column="5">
-      <widget class="QLineEdit" name="le_num_Y"/>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="lb_mcurv_space">
-       <property name="text">
-        <string>间距</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLabel" name="lb_space_X">
-       <property name="text">
-        <string>X:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QLineEdit" name="le_space_X"/>
-     </item>
-     <item row="1" column="3">
-      <widget class="QLabel" name="lb_space_X2">
+     <item row="1" column="6">
+      <widget class="QLabel" name="lb_space_Y2">
        <property name="text">
         <string>mm</string>
        </property>
@@ -114,13 +103,79 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="5">
-      <widget class="QLineEdit" name="le_space_Y"/>
+     <item row="1" column="1">
+      <widget class="QLabel" name="lb_space_X">
+       <property name="text">
+        <string>X:</string>
+       </property>
+      </widget>
      </item>
-     <item row="1" column="6">
-      <widget class="QLabel" name="lb_space_Y2">
+     <item row="1" column="2">
+      <widget class="QLineEdit" name="le_space_X">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="lb_mcurv_space">
+       <property name="text">
+        <string>间距</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLabel" name="lb_space_X2">
        <property name="text">
         <string>mm</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QLabel" name="lb_num_Y">
+       <property name="text">
+        <string>Y:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QLineEdit" name="le_num_Y">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLineEdit" name="le_num_X">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
        </property>
       </widget>
      </item>

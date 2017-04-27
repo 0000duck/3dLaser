@@ -1681,7 +1681,11 @@
        <number>0</number>
       </property>
       <item>
-       <widget class="QVTKWidget" name="qvtkWidget"/>
+       <widget class="QOpenGLWidget" name="openGLWidget">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -1825,6 +1829,23 @@
     <bool>false</bool>
    </attribute>
    <addaction name="action_FileOpen"/>
+   <addaction name="separator"/>
+   <addaction name="action_ViewForth"/>
+   <addaction name="action_ViewTop"/>
+   <addaction name="action_ViewRight"/>
+   <addaction name="separator"/>
+   <addaction name="action_ViewOriModel"/>
+   <addaction name="action_ViewUpdate"/>
+   <addaction name="separator"/>
+   <addaction name="action_BlockX2Y"/>
+   <addaction name="action_BlockY2X"/>
+   <addaction name="separator"/>
+   <addaction name="action_BlockPara"/>
+   <addaction name="separator"/>
+   <addaction name="action_StdModLine"/>
+   <addaction name="action_StdModPlat"/>
+   <addaction name="separator"/>
+   <addaction name="action_HelpAboutMe"/>
   </widget>
   <widget class="QStatusBar" name="statusBar">
    <property name="styleSheet">
@@ -1852,6 +1873,10 @@
    </property>
   </action>
   <action name="action_FileSave">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/prefix/resource/fileSave.ico</normaloff>:/prefix/resource/fileSave.ico</iconset>
+   </property>
    <property name="text">
     <string>保存</string>
    </property>
@@ -2000,6 +2025,10 @@
    </property>
   </action>
   <action name="action_ViewForth">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/prefix/resource/front-side.ico</normaloff>:/prefix/resource/front-side.ico</iconset>
+   </property>
    <property name="text">
     <string>前视图</string>
    </property>
@@ -2008,6 +2037,10 @@
    </property>
   </action>
   <action name="action_ViewTop">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/prefix/resource/top-side.ico</normaloff>:/prefix/resource/top-side.ico</iconset>
+   </property>
    <property name="text">
     <string>顶视图</string>
    </property>
@@ -2016,6 +2049,10 @@
    </property>
   </action>
   <action name="action_ViewRight">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/prefix/resource/left-side.ico</normaloff>:/prefix/resource/left-side.ico</iconset>
+   </property>
    <property name="text">
     <string>右视图</string>
    </property>
@@ -2026,6 +2063,10 @@
   <action name="action_ViewUpdate">
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/prefix/resource/refresh.ico</normaloff>:/prefix/resource/refresh.ico</iconset>
    </property>
    <property name="text">
     <string>视图更新</string>
@@ -2040,6 +2081,10 @@
    </property>
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/prefix/resource/center-side.ico</normaloff>:/prefix/resource/center-side.ico</iconset>
    </property>
    <property name="text">
     <string>原始模型</string>
@@ -2118,6 +2163,10 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/prefix/resource/b-X2Y.ico</normaloff>:/prefix/resource/b-X2Y.ico</iconset>
+   </property>
    <property name="text">
     <string>自动分块(X-&gt;Y)</string>
    </property>
@@ -2125,6 +2174,10 @@
   <action name="action_BlockY2X">
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/prefix/resource/b-Y2X.ico</normaloff>:/prefix/resource/b-Y2X.ico</iconset>
    </property>
    <property name="text">
     <string>自动分块(Y-&gt;X)</string>
@@ -2141,6 +2194,10 @@
   <action name="action_BlockPara">
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/prefix/resource/mirror.png</normaloff>:/prefix/resource/mirror.png</iconset>
    </property>
    <property name="text">
     <string>参数组分块…</string>
@@ -2202,11 +2259,19 @@
    </property>
   </action>
   <action name="action_StdModLine">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/prefix/resource/line.ico</normaloff>:/prefix/resource/line.ico</iconset>
+   </property>
    <property name="text">
     <string>直线(L)</string>
    </property>
   </action>
   <action name="action_StdModPlat">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/prefix/resource/parallel.ico</normaloff>:/prefix/resource/parallel.ico</iconset>
+   </property>
    <property name="text">
     <string>平面(P)</string>
    </property>
@@ -2222,6 +2287,10 @@
    </property>
   </action>
   <action name="action_HelpAboutMe">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/prefix/resource/info.ico</normaloff>:/prefix/resource/info.ico</iconset>
+   </property>
    <property name="text">
     <string>关于(A)</string>
    </property>
@@ -2236,13 +2305,6 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <customwidgets>
-  <customwidget>
-   <class>QVTKWidget</class>
-   <extends>QWidget</extends>
-   <header>QVTKWidget.h</header>
-  </customwidget>
- </customwidgets>
  <resources>
   <include location="icon.qrc"/>
  </resources>

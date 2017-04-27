@@ -17,6 +17,12 @@ public:
 
 private:
     Ui::ParaWindow *ui;
+
+
+private slots:
+    void slot_btn_motor();
+    void slot_btn_scan();
+    void slot_btn_sort();
 };
 
 #endif // PARAWINDOW_H

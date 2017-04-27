@@ -113,7 +113,7 @@
        </sizepolicy>
       </property>
       <property name="styleSheet">
-       <string notr="true">border-image: url(:/prefix/resource/sort.bmp);</string>
+       <string notr="true">border-image: url(:/prefix/resource/sort.png);</string>
       </property>
       <property name="text">
        <string/>
@@ -148,7 +148,7 @@
        </sizepolicy>
       </property>
       <property name="styleSheet">
-       <string notr="true">border-image: url(:/prefix/resource/scan.bmp);</string>
+       <string notr="true">border-image: url(:/prefix/resource/scan.png);</string>
       </property>
       <property name="text">
        <string/>
@@ -174,7 +174,7 @@
        </sizepolicy>
       </property>
       <property name="styleSheet">
-       <string notr="true">border-image: url(:/prefix/resource/motor.bmp);</string>
+       <string notr="true">border-image: url(:/prefix/resource/motor.png);</string>
       </property>
       <property name="text">
        <string/>
@@ -193,7 +193,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QScrollArea" name="a_para_sort">
+  <widget class="QScrollArea" name="para_sort">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -796,7 +796,7 @@
     </layout>
    </widget>
   </widget>
-  <widget class="QScrollArea" name="a_para_laser">
+  <widget class="QScrollArea" name="para_scan">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -1503,7 +1503,7 @@
     <zorder>gb_la_set</zorder>
    </widget>
   </widget>
-  <widget class="QScrollArea" name="a_para_motor">
+  <widget class="QScrollArea" name="para_motor">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -2445,9 +2445,9 @@
   </widget>
   <zorder>layoutWidget</zorder>
   <zorder>w_para_btn</zorder>
-  <zorder>a_para_motor</zorder>
-  <zorder>a_para_laser</zorder>
-  <zorder>a_para_sort</zorder>
+  <zorder>para_motor</zorder>
+  <zorder>para_scan</zorder>
+  <zorder>para_sort</zorder>
  </widget>
  <resources/>
  <connections>

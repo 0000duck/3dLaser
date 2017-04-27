@@ -1,7 +1,0 @@
-<RCC>
-    <qresource prefix="/prefix">
-        <file>resource/fileOpen.ico</file>
-        <file>resource/fileSave.ico</file>
-        <file>resource/3DLaser.ico</file>
-    </qresource>
-</RCC>
